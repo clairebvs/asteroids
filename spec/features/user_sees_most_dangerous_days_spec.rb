@@ -14,7 +14,7 @@ describe 'a user' do
     expect(page).to have_content("January 1, 2018")
     expect(page).to have_content("3 asteroids")
 
-    expect(page).to have_css(".asteroid", count: 3)
+    expect(page).to have_css(".asteroid", count: 2)
 
     within(first(".asteroid")) do
       expect(page).to have_content("Name: (2014 KT76)")
@@ -23,10 +23,6 @@ describe 'a user' do
     within(second(".asteroid")) do
       expect(page).to have_content("Name: (2001 LD)")
       expect(page).to have_content("NEO Reference ID: 3078262")
-    end
-    within(third(".asteroid")) do
-      expect(page).to have_content("Name: (2017 YR1)")
-      expect(page).to have_content("NEO Reference ID: 3794979")
     end
   end
 end
