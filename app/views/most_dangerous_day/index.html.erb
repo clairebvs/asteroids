@@ -8,7 +8,7 @@
 
 <% @presenter.asteroids.each do |asteroid| %>
   <div class='asteroid'>
-    <div class='name'><%= asteroid.name %></div>
-    <div class='id'><%= asteroid.id %></div>
+    Name: <li class='name'><%= asteroid.name %></li><br>
+    NEO Reference ID: <li class='id'><%= asteroid.id %></li>
   </div>
 <% end %>
